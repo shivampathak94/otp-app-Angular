@@ -1,0 +1,150 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+ 
+
+<style>
+    .dropbtn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+    }
+    
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    
+    .dropdown-content a:hover {background-color: #ddd;}
+    
+    .dropdown:hover .dropdown-content {display: block;}
+    
+    .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+    .hidden>div {
+	display:none;
+}
+    </style>
+
+
+<div class="topnav">
+  <a class="active" [routerLink]="['/emplportal']">Home</a>
+  <a [routerLink]="['/allratings']">All Ratings</a>
+  <a [routerLink]="['/ratings']">Submitted Ratings</a>
+  <a [routerLink]="['/home']">Log Out</a>
+</div>
+
+
+<br>
+
+
+<form>
+
+    
+
+    <div class="form-group">
+        <label>Employee Name :</label>&nbsp;
+        <input type="text" [(ngModel)]="user.empName"  placeholder="empName" name="empName"  id="empName" /> &nbsp;
+    </div>
+
+    
+    <div class="form-group">
+          <label>Employee Id :</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type=text [(ngModel)]="user.empId"  placeholder="Name1" name="empId"  id="empId"/> &nbsp;
+     </div>
+
+     <div class="form-group">
+            <label>Designation :</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type=text [(ngModel)]="user.designation"  placeholder="Designation" name="designation"  id="designation" />
+          </div>
+
+
+<div class="form-group">
+<label class="container" > 
+     Tech Skill :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number"  min="1" max="5" [(ngModel)]="user.techSkill"  placeholder="Name1" name="techSkill"  id="techSkill"  data-md-icheck (change)="toggleVisibility($event)"/>
+    <span class="checkmark"></span>
+    </label> 
+   
+</div>
+
+
+<div class="form-group">
+<label class="container"> 
+    Analysis Skill :&nbsp;&nbsp;&nbsp;  &nbsp;   <input type="number" min="1" max="5" [(ngModel)]="user.analysisSkill"  placeholder=" Analysis Skill" name="analysisSkill"  id="analysisSkill"  data-md-icheck (change)="toggleVisibility($event)"/>
+        <span class="checkmark"></span>
+        </label>
+        
+        </div>
+        
+
+        <div  class="form-group">
+<label class="container"> 
+    Code Quality :   &nbsp;  &nbsp;  <input type="number" min="1" max="5" [(ngModel)]="user.codeQuality" placeholder=" Code Quality" name="codeQuality"  id="codeQuality"  data-md-icheck (change)="toggleVisibility($event)"/>
+            <span class="checkmark"></span>
+            </label>
+            
+            </div>
+
+
+
+<div class="form-group">
+<label class="container"> 
+    Attitude :  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <input type="number" min="1" max="5" [(ngModel)]="user.attitude"  placeholder="Attitude" name="attitude"  id="attitude"  data-md-icheck (change)="toggleVisibility($event)"/>
+                <span class="checkmark"></span>
+                </label>
+                
+                </div>
+
+<div class="form-group">                
+<label class="container"> 
+    Adaptive :   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <input type="number"  min="1" max="5" [(ngModel)]="user.adaptive"  placeholder="Adaptive" name="adaptive"  id="adaptive"   data-md-icheck (change)="toggleVisibility($event)"/>
+                    <span class="checkmark"></span>
+                    </label>
+                   
+                    </div>
+                    
+<div class="form-group">   
+<label class="container"> 
+    Responsibility :    &nbsp;&nbsp;       <input type="number"  min="1" max="5"[(ngModel)]="user.responsibility" placeholder="Responsibility" name="responsibility"  id="responsibility"  data-md-icheck (change)="toggleVisibility($event)"/>
+                        <span class="checkmark"></span>
+                        </label>
+                        
+                        </div>
+                 
+ <div class="form-group">
+<label class="container"> 
+    Delivery :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="number" [(ngModel)]="user.delivery" min="1" max="5" placeholder="Delivery" name="delivery"  id="delivery"  data-md-icheck (change)="toggleVisibility($event)"/>
+                            <span class="checkmark"></span>
+                            </label>
+                            
+                            </div>
+                          
+                            <div class="form-group">
+                            comment :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="textbox" [(ngModel)]="user.comment"  placeholder="Name1" name="comment"  id="comment">
+             </div>
+              
+                            <button type="submit"  class="btn btn-info" value="Log In" (click)="createRating()">Submit</button>&nbsp;
+      <button type="reset" class="btn btn-warning" value="Reset">Cancel</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</form>
+
+
+
+                         

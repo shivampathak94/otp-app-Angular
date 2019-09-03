@@ -1,0 +1,142 @@
+<div class="topnav">
+  <a class="active" [routerLink]="['/adminportal']">Home</a>
+  <a [routerLink]="['/approve']">Approve Accounts</a>
+  <a [routerLink]="['/approveratings']">Approve Ratings</a>
+  <a [routerLink]="['/home']">Log Out</a>
+</div>
+<br>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+    }
+    
+    td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+    background-color: #dddddd;
+    }
+    </style>
+</head>
+
+    <div>
+      <table border="1"id="tblOne" style="width:50%; float:left" >
+        <thead></thead>
+        <tr>
+          <th>empName</th>
+          <th>empId</th>
+          <th>designation</th>
+          <th>techSkill</th>
+          <th>analysisSkill</th>
+          <th>codeQuality</th>
+          <th>attitude</th>
+          <th>adaptive</th>
+          <th>responsibility</th>
+          <th>delivery</th>
+          <th>comment</th>
+  
+  
+          </tr>
+        
+        <tbody> 
+            <tr *ngFor="let employee of employees">
+            <!--  <tr *ngFor="let employee of employees; let i=index;" [attr.id]="employee.id" (click)="deleteEmployee(employee);">-->
+              <td>{{employee.empName}}</td>
+              <td>{{employee.empId}}</td>
+              <td>{{employee.designation}}</td>
+              <td>{{employee.techSkill}}</td>
+              <td>{{employee.analysisSkill}}</td>
+              <td>{{employee.codeQuality}}</td>
+              <td>{{employee.attitude}}</td>
+              <td>{{employee.adaptive}}</td>
+              <td>{{employee.responsibility}}</td>
+              <td>{{employee.delivery}}</td>
+              <td>{{employee.comment}}</td>
+              
+               <!-- <button class="btn btn-primary btn-block"  (click)="approveEmployees()">Create</button>-->
+    
+               
+    
+            <!--  <Button style="margin:10px;">Approve</Button>--> 
+                 
+              <!--   <button >DELETE ROW</button>-->
+              <!--   <button >DELETE ROW</button>-->
+     <!-- <Button >  Reject  </Button>  -->
+              
+    
+                </tr>
+        </tbody>
+          </table>
+    
+    
+         
+          <table id="tblTwo" style="width:10%; float:left">
+              <tr>
+                  <th>Approve</th>
+              </tr>
+    
+              <tbody> 
+                  <tr *ngFor="let employee of employees; let i=index;"  let i=index;  [attr.id]="employee.id" (click)=approveRating(employee);>
+                     <td>
+                       
+                       <a href="/approveratings">Approve</a>
+                    </td>
+                      </tr>
+            </table> 
+    
+            <table id="tblTwo" style="width:10%; float:left">
+                <tr>
+                    <th>Reject</th>
+                </tr>
+      
+                <tbody> 
+                    <tr *ngFor="let employee of employees; let i=index;"  let i=index;  [attr.id]="employee.id" (click)=deleteRating(employee);>
+                       <td>
+                         
+                         <a href="/approveratings">Reject</a>
+                      </td>
+                        </tr>
+              </table> 
+            
+          
+          
+            
+          </div>
+          
+    
+          <!DOCTYPE html>
+    <html>
+    <head>
+    <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 50%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    </style>
+    </head>
+       <body>
+    
+       </body>
+          </html>
+
