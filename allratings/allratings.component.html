@@ -1,0 +1,70 @@
+  
+<div class="topnav">
+        <a class="active" [routerLink]="['/emplportal']">Home</a>
+        <a [routerLink]="['/allratings']">All Ratings</a>
+        <a [routerLink]="['/ratings']">Submitted Ratings</a>
+        <a [routerLink]="['/home']">Log Out</a>
+      </div>
+    
+      <!DOCTYPE html>
+    <html>
+    <head>
+    <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    </style>
+    </head>
+    <body>
+    
+        <table border="1">
+            <thead></thead>
+            <tr>
+              <th>empName</th>
+              <th>empId</th>
+              <th>designation</th>
+              <th>techSkill</th>
+              <th>analysisSkill</th>
+              <th>codeQuality</th>
+              <th>attitude</th>
+              <th>adaptive</th>
+              <th>responsibility</th>
+              <th>delivery</th>
+              <th>comment</th>
+
+
+              </tr>
+            
+            <tbody>
+                <tr *ngFor="let employee of employees">
+                    <td>{{employee.empName}}</td>
+                    <td>{{employee.empId}}</td>
+                    <td>{{employee.designation}}</td>
+                    <td>{{employee.techSkill}}</td>
+                    <td>{{employee.analysisSkill}}</td>
+                    <td>{{employee.codeQuality}}</td>
+                    <td>{{employee.attitude}}</td>
+                    <td>{{employee.adaptive}}</td>
+                    <td>{{employee.responsibility}}</td>
+                    <td>{{employee.delivery}}</td>
+                    <td>{{employee.comment}}</td>
+
+                    </tr>
+            </tbody>
+              </table>
+    
+    </body>
+    </html>
+    

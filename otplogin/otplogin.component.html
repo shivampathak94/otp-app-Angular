@@ -1,0 +1,72 @@
+ 
+<app-navbar></app-navbar>
+
+<!-- 
+<div style="text-align:center">
+    <h1>
+      Employee Login
+    </h1>
+    
+  </div>
+  
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+
+
+    <!-- Login Form -->
+   <!-- <form class="login-container" #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)" novalidate>
+      
+      <div class="form-group">
+      <input ngModel type="text" [(ngModel)]="user.username" required id="loginemp" class="fadeIn second" #loginemp="ngModel" name="loginemp" placeholder="login">
+      </div>
+      
+      <div *ngIf="loginemp.errors && (loginemp.dirty || loginemp.touched)" class="alert alert-danger">
+        <div [hidden]="loginemp.errors.required">
+         Please enter the name
+       </div>  
+       <div [hidden]="loginemp.touched.required">
+          Please enter the name
+        </div>
+      </div>
+
+      <div class="form-group"> 
+            <input ngModel required type="password" id="password"  class="fadeIn third" #password="ngModel" name="password" placeholder="password">
+          </div>
+          <div class="alert alert-danger" *ngIf="password.touched && !password.value">Password required</div><br><br>
+
+      <button type="submit"  [disabled]="!userForm.form.valid" class="btn btn-info" value="Log In" [routerLink]="['/emplportal']">Login</button>&nbsp;
+      <button type="reset" class="btn btn-warning" value="Reset">Cancel</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <button type="submit" class="btn btn-primary btn-lg" value="Register" [routerLink]="['/register']">Register Now!</button>
+    </form> -->
+
+    
+
+  <!-- </div>
+</div>      --> 
+
+USER NAME: <input type="text"  [(ngModel)]="user.username" class="form-control" />
+
+PASSWORD : <input type="text"  [(ngModel)]="user.password" class="form-control" />
+
+
+<button class="btn btn-primary btn-block" [routerLink]="['/otpvalidation']" (click)="createOTPLogin()">Create</button>
+              
+
+<button class="btn btn-warning btn-block" [routerLink]="['/home']" >Cancel</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
