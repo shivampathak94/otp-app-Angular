@@ -1,2 +1,2 @@
 #Work in progress
-This project is for Multi factor authentication
+This project is for Multi factor authentication.
